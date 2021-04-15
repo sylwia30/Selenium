@@ -1,0 +1,146 @@
+# przypisanie elementów z listy do zmiennych
+>>> owoce = ['banan', 'malina', 'kiwi']
+>>> zolte_owoce, czerwone_owoce, zielone_owoce = owoce
+>>> zolte_owoce
+'banan'
+>>> czerwone_owoce
+'malina'
+>>> zielone_owoce
+'kiwi'
+
+
+#sortowanie
+
+nazwiska = ["Kowalski", "Nowak", "Adamiak"]
+nazwiska.sort()
+print(nazwiska)
+# na ekranie zostanie wypisana informacja:
+
+['Adamiak', 'Kowalski', 'Nowak']
+
+nazwiska = ["Kowalski", "Nowak", "Adamiak"]
+posortowane = sorted(nazwiska)
+print(nazwiska)
+print(posortowane)
+na ekranie zostanie wypisana informacja:
+
+['Kowalski', 'Nowak', 'Adamiak']
+['Adamiak', 'Kowalski', 'Nowak']
+
+Metoda sorted(lista, reverse = True) umożliwia nam zmianę sposobu sortowania. Dla zapisu:
+
+nazwiska = ["Kowalski", "Nowak", "Adamiak"]
+posortowane = sorted(nazwiska, reverse=True)
+print(nazwiska)
+print(posortowane)
+na ekranie zostanie wypisana informacja:
+
+['Kowalski', 'Nowak', 'Adamiak']
+['Nowak', 'Kowalski', 'Adamiak']
+
+# krotki/tuple
+
+>>> imiona = ('sylwia', 'ala', 'magda')
+>>> type(imiona)
+<type 'tuple'>
+>>> 
+>>> imiona = 'sylwia', 'ala', 'magda' # bez nawiasów, type: tuple
+>>> type(imiona)
+<type 'tuple'>
+>>> 
+>>> imiona = 'sylwia', # bez nawiasów z przecinkiem, nadal tuple
+>>> type(imiona)
+<type 'tuple'>
+>>> 
+>>> imiona = 'sylwia' # uwaga! type: string
+>>> type(imiona)
+<type 'str'>
+
+
+# zbiory
+
+>>> pierwszy_zbior = {'Warszawa', 'Kielce'}
+>>> pierwszy_zbior.add('Krakow')
+>>> print(pierwszy_zbior)
+set(['Warszawa', 'Krakow', 'Kielce'])
+>>> pierwszy_zbior.add('Warszawa')
+>>> print(pierwszy_zbior)
+set(['Warszawa', 'Krakow', 'Kielce']) # element już jest na liście, mogą być tylko unikatowe wartości
+>>> pierwszy_zbior[0] # zbiory nie wspierają indexowania
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'set' object does not support indexing
+
+# operacje na zbiorach
+
+>>> pierwszy_zbior = {'Warszawa', 'Kielce'}
+>>> drugi_zbior = {'Warszawa'}
+>>> print(pierwszy_zbior - drugi_zbior) # różnica zbiorów
+set(['Kielce'])
+>>> print(pierwszy_zbior | drugi_zbior) # suma zbiorów
+set(['Warszawa', 'Kielce'])
+>>> print(pierwszy_zbior & drugi_zbior) # część wspólna zbiorów
+set(['Warszawa'])
+>>> print(pierwszy_zbior ^ drugi_zbior) # różnica symetryczna
+set(['Kielce'])
+
+# słowniki
+
+>>> dziennik = {1:'Nowak', 2:'Kowalski'}
+>>> 
+>>> # wyświetlanie wartości konkretnego klucza
+>>> dziennik[1]
+'Nowak'
+>>> dziennik.get(1)
+'Nowak'
+>>> 
+>>> # dodawanie klucza z wartością
+>>> dziennik[3] = 'Wisniewski'
+>>> dziennik
+{1: 'Nowak', 2: 'Kowalski', 3: 'Wisniewski'}
+>>> 
+>>> for key in dziennik.keys():
+...     print(key)
+
+1
+2
+3
+
+>>> for value in dziennik.values():
+...     print(value)
+... 
+Nowak
+Kowalski
+Wisniewski
+
+# obsługa wyjątków
+
+try:
+	print('Podaj liczbe: ')
+	pierwsza_liczba = int(input())
+exept:	NameError:
+	print('Podana wartość jest błędna)
+
+blok od nowa się uruchomi od nowa w przypadku wprowadzenia błędnej wartości
+while True:
+	try:
+		print('Podaj liczbe: ')
+		pierwsza_liczba = int(input())
+		break
+	exept:	NameError:
+		print('Podana wartość jest błędna)
+		continue
+
+
+wrócić do odcinka 47, 70 - selectory CSS
+
+
+
+
+
+
+
+
+
+
+
